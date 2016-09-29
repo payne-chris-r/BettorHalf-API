@@ -10,7 +10,7 @@ class UsersController < ProtectedController
       head :bad_request
     end
   end
-
+# ProtectedController
   # POST '/sign-in'
   def signin
     creds = user_creds
