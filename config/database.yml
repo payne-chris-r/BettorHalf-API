@@ -1,4 +1,4 @@
-<% project_name = 'better-half' %>
+<% project_name = 'bettor-half' %>
 
 default: &default
   adapter: postgresql
