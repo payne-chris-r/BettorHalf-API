@@ -16,26 +16,3 @@
 #                password: 'abc123',
 #                password_confirmation: nil)
 # end
-Fund.create([
-              { name: 'NBA Ballers',
-                sport: 'NBA',
-                minbet: 500,
-                description: 'This fund bets on the NBA',
-                user_id: 1 },
-              { name: 'Drive for show ',
-                sport: 'Golf',
-                minbet: 1000,
-                description: 'This fund bets on Golf',
-                user_id: 1 },
-              { name: 'Hardcourt sliders',
-                sport: 'Tennis',
-                minbet: 300,
-                description: 'This fund bets on the Tennis',
-                user_id: 1 },
-              { name: 'Big Hitters',
-                sport: 'NHL',
-                minbet: 2000,
-                description: 'This fund bets on NHL',
-                user_id: 1 }
-
-            ])
