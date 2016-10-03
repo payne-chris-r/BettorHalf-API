@@ -49,11 +49,11 @@ class FundsController < ApplicationController
 
   private
 
-    def set_fund
-      @fund = Fund.find(params[:id])
-    end
+  def set_fund
+    @fund = Fund.find(params[:id])
+  end
 
-    def fund_params
-      params.require(:fund).permit(:name, :sport, :minbet, :description, :user_id)
-    end
+  def fund_params
+    params.require(:fund).permit(:name, :sport, :minbet, :description, :user_id)
+  end
 end
