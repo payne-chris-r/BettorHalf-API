@@ -1,4 +1,4 @@
-class FundsController < ApplicationController
+class FundsController < ProtectedController
   before_action :set_fund, only: [:show, :update, :destroy]
 
   # GET /funds
