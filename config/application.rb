@@ -39,9 +39,10 @@ module BettorHalf
     config.active_record.raise_in_transactional_callbacks = true
     # https://nishkixs.github.io
     # Cross-Origin Resource Sharing
+    # https://nishkixs.github.io
     config.middleware.use Rack::Cors do
       allow do
-        origins ENV['CLIENT_ORIGIN'] || 'https://nishkixs.github.io'
+        origins ENV['CLIENT_ORIGIN'] || 'http://localhost:8080'
         resource '*',
                  headers: :any,
                  methods: [:options, :get,

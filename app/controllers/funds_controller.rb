@@ -4,21 +4,26 @@ class FundsController < ProtectedController
   # GET /funds
   # GET /funds.json
   def index
-    @funds = Fund.all
-
+    @funds = current_user.funds
+    #  Fund.all
     render json: @funds
   end
 
   # GET /funds/1
   # GET /funds/1.json
   def show
-    render json: @fund
+    # render json: @fund
+    render json: Fund.find(params[:id])
+
+    # render json: Trip.find(params[:id])
   end
 
   # POST /funds
   # POST /funds.json
   def create
-    @fund = Fund.new(fund_params)
+    @fund = current_user.funds.build(fund_params)
+    # current_user.trips.build(trip_params)
+    # Fund.new(fund_params)
 
     if @fund.save
       render json: @fund, status: :created, location: @fund
@@ -50,7 +55,9 @@ class FundsController < ProtectedController
   private
 
   def set_fund
-    @fund = Fund.find(params[:id])
+    @fund = current_user.funds.find(params[:id])
+    # current_user.trips.find(params[:id])
+    # Fund.find(params[:id])
   end
 
   def fund_params
